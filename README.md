@@ -1,2 +1,3 @@
-Primeiro projeto em html e css.
+Primeiro projeto em html, css e javascript.
 -> Formulário estático de entrada de textos.
+Página web geradora de sites simples
