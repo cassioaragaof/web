@@ -1,5 +1,5 @@
 // Chave e endereço do servidor:
-let chave = "SUA_CHAVE"; 
+let chave = CONFIG.API_KEY; 
 let endereco = "https://api.groq.com/openai/v1/chat/completions";
 
 let prompt = `Você é um designer web premiado e Programador. 
@@ -29,20 +29,18 @@ Todo o conteúdo em português, criativo e específico para o negócio.`
 // Clicou no Botão GERAR - Chama essa função
 async function gerarCodigo() {
 
-
     let textarea = document.querySelector(".texto-pagina").value
 
     let resposta = await fetch(endereco, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer SUA_CHAVE"
+            // Aqui usamos crases (template strings) para injetar a variável da chave
+            "Authorization": `Bearer ${chave}` 
         },
         body: JSON.stringify({
             "model": "llama-3.3-70b-versatile",
             "messages": [
-                // user = usuário - a pessoa que está mexendo no site pede
-                // system = quem a IA deve ser
                 {
                     "role": "user",
                     "content": textarea
@@ -54,7 +52,6 @@ async function gerarCodigo() {
             ],
         })
     })
-
 
     let dados = await resposta.json()
     let resultado = dados.choices[0].message.content
