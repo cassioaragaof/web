@@ -1,0 +1,154 @@
+/* Configurações gerais*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0B132B;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* O container principal */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 300px 1fr; 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+/* Estilo padrão para todos os blocos */
+.card {
+    background-color: #1C2541;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos do Perfil */
+.profile-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.avatar {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.role {
+    color: #c3c3c3;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Container para a Caixa de entrada e Tarefas */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+/* Estilos da Caixa de Entrada */
+.message-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.message-list li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos de Due Date e Tarefas */
+.task-item {
+    background-color: #3b3b3b;
+    padding: 15px;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-box p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Barras de progresso */
+.progress-bar {
+    width: 100%;
+    background-color: #3b3b3b;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.btn-exit {
+    /* Esta é a linha que empurra o botão para o fundo: */
+    margin-top: auto; 
+    
+    /* O resto do estilo do botão: */
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #dc3545;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-exit:hover {
+    background-color: #bd2130;
+}
+
+.btn-kanban {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #ffc107; 
+    color: #0B132B;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-kanban:hover {
+    background-color: #e0a800;
+}
+
+.fill-blue { background-color: #007bff; }
+.fill-green { background-color: #28a745; }
