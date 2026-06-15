@@ -1,31 +1,35 @@
-/* Configurações gerais*/
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
 
+/* CONFIGURAÇÕES GERAIS */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0B132B;
-    margin: 0;
-    padding: 20px;
     color: #ffffff;
+    padding: 20px;
 }
 
-/* O container principal */
+/* CONTAINER PRINCIPAL */
 .dashboard-container {
     display: grid;
     grid-template-columns: 300px 1fr; 
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto; 
+    align-items: stretch;
 }
 
-/* Estilo padrão para todos os blocos */
 .card {
     background-color: #1C2541;
     border-radius: 8px;
     padding: 24px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos do Perfil */
+/* COLUNA ESQUERDA: PERFIL */
 .profile-card {
     text-align: center;
     display: flex;
@@ -40,7 +44,6 @@ body {
 
 .role {
     color: #c3c3c3;
-    margin-top: -10px;
     margin-bottom: 20px;
 }
 
@@ -50,23 +53,20 @@ body {
     line-height: 1.6;
 }
 
-/* Container para a Caixa de entrada e Tarefas */
+/* CONTEÚDO PRINCIPAL */
 .main-content {
     display: flex;
     flex-direction: column;
     gap: 20px; 
 }
 
-/* Estilos da Caixa de Entrada */
 .message-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .message-list li {
     padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #2a365c; 
     font-size: 14px;
 }
 
@@ -76,13 +76,14 @@ body {
 
 /* Estilos de Due Date e Tarefas */
 .task-item {
-    background-color: #3b3b3b;
+    background-color: #0B132B;
     padding: 15px;
     border-left: 4px solid #ffc107;
     border-radius: 4px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .stats-container {
@@ -100,7 +101,7 @@ body {
 /* Barras de progresso */
 .progress-bar {
     width: 100%;
-    background-color: #3b3b3b;
+    background-color: #0B132B;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -113,13 +114,15 @@ body {
     font-weight: bold;
 }
 
+.fill-blue { background-color: #007bff; }
+.fill-green { background-color: #28a745; }
+
+/* BOTÕES */
 .btn-exit {
-    /* Esta é a linha que empurra o botão para o fundo: */
     margin-top: auto; 
-    
-    /* O resto do estilo do botão: */
-    display: inline-block;
-    padding: 10px 16px;
+    display: block; 
+    text-align: center;
+    padding: 12px 16px;
     background-color: #dc3545;
     color: white;
     text-decoration: none;
@@ -137,7 +140,7 @@ body {
     display: block;
     text-align: center;
     margin-top: 15px;
-    padding: 10px;
+    padding: 12px;
     background-color: #ffc107; 
     color: #0B132B;
     text-decoration: none;
@@ -150,5 +153,17 @@ body {
     background-color: #e0a800;
 }
 
-.fill-blue { background-color: #007bff; }
-.fill-green { background-color: #28a745; }
+/* RESPONSIVIDADE (Telas menores e celulares) */
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr; 
+    }
+    
+    .profile-card {
+        height: auto; 
+    }
+    
+    .btn-exit {
+        margin-top: 20px; 
+    }
+}
