@@ -8,27 +8,30 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0B132B; 
     color: #ffffff;
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    min-height: 100vh;
 }
 
-.login-container {
-    background-color: #1C2541;
+.edit-profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.edit-card {
+    background-color: #1C2541; 
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     width: 100%;
-    max-width: 400px; 
+    max-width: 500px;
     border-top: 5px solid #4da3ff; 
 }
 
-.login-container h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.edit-card h2 {
     color: #4da3ff;
-    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .input-group {
@@ -38,8 +41,9 @@ body {
 .input-group label {
     display: block;
     margin-bottom: 8px;
-    font-size: 14px;
     color: #b0b8d6;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .input-group input {
@@ -48,51 +52,51 @@ body {
     border-radius: 6px;
     border: 1px solid #2a365c;
     background-color: #0B132B;
-    color: #ffffff;
-    font-size: 15px;
-    outline: none;
+    color: white;
+    font-size: 14px;
     transition: border-color 0.2s;
 }
 
 .input-group input:focus {
     border-color: #4da3ff;
+    outline: none;
 }
 
-.btn-login {
-    width: 100%;
+.actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-cancel, .btn-save {
+    flex: 1;
     padding: 12px;
-    background-color: #4da3ff;
-    color: #0B132B; 
-    border: none;
     border-radius: 6px;
-    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-    margin-top: 10px;
-}
-
-.btn-login:hover {
-    background-color: #3388ff; 
-}
-
-.btn-login:active {
-    transform: scale(0.98);
-}
-
-.login-footer {
-    margin-top: 25px;
     text-align: center;
-    font-size: 13px;
-    color: #b0b8d6;
-}
-
-.login-footer a {
-    color: #4da3ff;
     text-decoration: none;
-    font-weight: bold;
+    border: none;
+    transition: all 0.2s;
+    font-size: 14px;
 }
 
-.login-footer a:hover {
-    text-decoration: underline;
+.btn-cancel {
+    background-color: transparent;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.btn-cancel:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-save {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-save:hover {
+    background-color: #218838;
 }

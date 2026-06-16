@@ -8,63 +8,40 @@
 </head>
 <body>
 
-    <header class="scrum-header">
-        <div class="sprint-info">
-            <h1>Sprint #1: MVP do Sistema</h1>
-            <p class="sprint-goal">🎯 <strong>Meta da Sprint:</strong> Entregar o fluxo de autenticação e o painel principal do usuário.</p>
-        </div>
-        <a href="dashboard.html" class="btn-back">⬅ Voltar ao Painel</a>
-    </header>
+    <div class="kanban-wrapper">
+        <header class="scrum-header">
+            <div class="sprint-info">
+                <h1>Sprint #1: MVP do Sistema</h1>
+                <p class="sprint-goal">🎯 <strong>Meta:</strong> Autenticação e Painel.</p>
+            </div>
+            <a href="dashboard.html" class="btn-back">⬅ Voltar ao Painel</a>
+        </header>
 
-    <div class="scrum-board">
-        
-        <div class="scrum-column">
-            <h2 class="column-title">Sprint Backlog <span>2</span></h2>
-            
-            <div class="task-card border-yellow">
-                <h4>Criar banco de dados</h4>
-                <p>Estruturar as tabelas de usuários no SQL.</p>
-                <div class="task-meta">⏱ 5 Pontos</div>
-            </div>
-            
-            <div class="task-card border-yellow">
-                <h4>Revisar layout da Home</h4>
-                <p>Verificar responsividade no mobile.</p>
-                <div class="task-meta">⏱ 3 Pontos</div>
-            </div>
+        <div class="add-task-container">
+            <h3 class="add-task-title">✨ Criar Nova Tarefa</h3>
+            <section class="add-task-form">
+                <input type="text" id="taskTitle" placeholder="Título da tarefa...">
+                <input type="date" id="taskDate">
+                <button onclick="addNewTask()">Adicionar Tarefa</button>
+            </section>
         </div>
 
-        <div class="scrum-column">
-            <h2 class="column-title">Em Desenvolvimento <span>1</span></h2>
-            
-            <div class="task-card border-blue">
-                <h4>Implementar login</h4>
-                <p>Conectar o formulário HTML com a API do servidor.</p>
-                <div class="task-meta">⏱ 8 Pontos</div>
+        <div class="scrum-board">
+            <div class="scrum-column" id="col-todo">
+                <h2 class="column-title">Sprint Backlog <span>0</span></h2>
+            </div>
+            <div class="scrum-column" id="col-in-progress">
+                <h2 class="column-title">Em Desenvolvimento <span>0</span></h2>
+            </div>
+            <div class="scrum-column" id="col-review">
+                <h2 class="column-title">Revisão / QA <span>0</span></h2>
+            </div>
+            <div class="scrum-column" id="col-done">
+                <h2 class="column-title">Concluído <span>0</span></h2>
             </div>
         </div>
-
-        <div class="scrum-column">
-            <h2 class="column-title">Revisão / QA <span>1</span></h2>
-            
-            <div class="task-card border-purple">
-                <h4>Testes de Segurança</h4>
-                <p>Testar injeção de SQL no formulário de login.</p>
-                <div class="task-meta">⏱ 2 Pontos</div>
-            </div>
-        </div>
-
-        <div class="scrum-column">
-            <h2 class="column-title">Concluído <span>1</span></h2>
-            
-            <div class="task-card border-green">
-                <h4>Criar página de Perfil</h4>
-                <p>Montar HTML e CSS usando Grid e Flexbox.</p>
-                <div class="task-meta">⏱ 5 Pontos</div>
-            </div>
-        </div>
-
     </div>
 
+    <script src="app.js"></script>
 </body>
 </html>

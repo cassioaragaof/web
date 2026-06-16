@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-/* CONFIGURAÇÕES GERAIS */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #0B132B;
@@ -12,7 +11,6 @@ body {
     padding: 20px;
 }
 
-/* CONTAINER PRINCIPAL */
 .dashboard-container {
     display: grid;
     grid-template-columns: 300px 1fr; 
@@ -29,7 +27,6 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* COLUNA ESQUERDA: PERFIL */
 .profile-card {
     text-align: center;
     display: flex;
@@ -53,7 +50,6 @@ body {
     line-height: 1.6;
 }
 
-/* CONTEÚDO PRINCIPAL */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -74,7 +70,6 @@ body {
     border-bottom: none;
 }
 
-/* Estilos de Due Date e Tarefas */
 .task-item {
     background-color: #0B132B;
     padding: 15px;
@@ -98,7 +93,6 @@ body {
     font-weight: bold;
 }
 
-/* Barras de progresso */
 .progress-bar {
     width: 100%;
     background-color: #0B132B;
@@ -117,7 +111,10 @@ body {
 .fill-blue { background-color: #007bff; }
 .fill-green { background-color: #28a745; }
 
-/* BOTÕES */
+.fill-blue { background-color: #007bff; }
+.fill-green { background-color: #28a745; }
+.fill-red { background-color: #dc3545; }
+
 .btn-exit {
     margin-top: auto; 
     display: block; 
@@ -153,17 +150,38 @@ body {
     background-color: #e0a800;
 }
 
-/* RESPONSIVIDADE (Telas menores e celulares) */
+.btn-edit-profile {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #4da3ff;
+    color: #4da3ff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 15px 0; 
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-edit-profile:hover {
+    background-color: #4da3ff;
+    color: #0B132B;
+}
+
 @media (max-width: 768px) {
     .dashboard-container {
         grid-template-columns: 1fr; 
     }
-    
     .profile-card {
         height: auto; 
     }
-    
     .btn-exit {
         margin-top: 20px; 
     }
 }
+
