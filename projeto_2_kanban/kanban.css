@@ -105,16 +105,27 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .btn-back {
     background-color: transparent;
-    color: #ffc107;
-    text-decoration: none;
+    color: #ffc107; 
     border: 1px solid #ffc107;
-    padding: 8px 16px;
+    text-decoration: none;
     border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
     transition: all 0.2s;
     white-space: nowrap;
-    height: 62px;
+    height: 92px;
     width: 12%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #ffc107;
+    color: #0B132B; 
 }
